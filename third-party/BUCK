@@ -49,75 +49,15 @@ command_alias(
 ) if not host_info().os.is_windows else None
 
 # buildifier: disable=no-effect
-sh_binary(
-    name = "ocaml-exe",
-    main = "opam/bin/ocaml",
-    visibility = [
-        "PUBLIC",
-    ],
-) if not host_info().os.is_windows else None
-
-# buildifier: disable=no-effect
-sh_binary(
-    name = "ocamlopt-exe",
-    main = "opam/bin/ocamlopt.opt",
-    visibility = [
-        "PUBLIC",
-    ],
-) if not host_info().os.is_windows else None
-
-# buildifier: disable=no-effect
 export_file(
-    name = "ocamlopt.byte",
-    src = "opam/bin/ocamlopt.byte",
+    name = "ocamldep.byte",
+    src = "opam/bin/ocamldep.byte",
 ) if not host_info().os.is_windows else None
 
 # buildifier: disable=no-effect
 sh_binary(
-    name = "ocamlprof-exe",
-    main = "opam/bin/ocamlprof",
-    visibility = [
-        "PUBLIC",
-    ],
-) if not host_info().os.is_windows else None
-
-# buildifier: disable=no-effect
-sh_binary(
-    name = "dune-exe",
-    main = "opam/bin/dune",
-    visibility = [
-        "PUBLIC",
-    ],
-) if not host_info().os.is_windows else None
-
-# buildifier: disable=no-effect
-sh_binary(
-    name = "ocamlmklib-exe",
-    main = "opam/bin/ocamlmklib",
-    visibility = [
-        "PUBLIC",
-    ],
-) if not host_info().os.is_windows else None
-
-# buildifier: disable=no-effect
-sh_binary(
-    name = "ocamlruni-exe",
-    main = "opam/bin/ocamlruni",
-    visibility = [
-        "PUBLIC",
-    ],
-) if not host_info().os.is_windows else None
-
-# buildifier: disable=no-effect
-export_file(
-    name = "ocamllex.byte",
-    src = "opam/bin/ocamllex.byte",
-) if not host_info().os.is_windows else None
-
-# buildifier: disable=no-effect
-sh_binary(
-    name = "ocamlobjinfo-exe",
-    main = "opam/bin/ocamlobjinfo.opt",
+    name = "ocamlmktop-exe",
+    main = "opam/bin/ocamlmktop",
     visibility = [
         "PUBLIC",
     ],
@@ -127,15 +67,6 @@ sh_binary(
 sh_binary(
     name = "ocamlbuild-exe",
     main = "opam/bin/ocamlbuild",
-    visibility = [
-        "PUBLIC",
-    ],
-) if not host_info().os.is_windows else None
-
-# buildifier: disable=no-effect
-sh_binary(
-    name = "ocamlyacc-exe",
-    main = "opam/bin/ocamlyacc",
     visibility = [
         "PUBLIC",
     ],
@@ -161,8 +92,8 @@ sh_binary(
 
 # buildifier: disable=no-effect
 sh_binary(
-    name = "ocamlmktop-exe",
-    main = "opam/bin/ocamlmktop",
+    name = "ocamlcmt-exe",
+    main = "opam/bin/ocamlcmt",
     visibility = [
         "PUBLIC",
     ],
@@ -170,56 +101,8 @@ sh_binary(
 
 # buildifier: disable=no-effect
 sh_binary(
-    name = "ocamlrun-exe",
-    main = "opam/bin/ocamlrun",
-    visibility = [
-        "PUBLIC",
-    ],
-) if not host_info().os.is_windows else None
-
-# buildifier: disable=no-effect
-sh_binary(
-    name = "ocamlc-exe",
-    main = "opam/bin/ocamlc.opt",
-    visibility = [
-        "PUBLIC",
-    ],
-) if not host_info().os.is_windows else None
-
-# buildifier: disable=no-effect
-export_file(
-    name = "ocamlbuild.byte",
-    src = "opam/bin/ocamlbuild.byte",
-) if not host_info().os.is_windows else None
-
-# buildifier: disable=no-effect
-sh_binary(
-    name = "ocamldep-exe",
-    main = "opam/bin/ocamldep.opt",
-    visibility = [
-        "PUBLIC",
-    ],
-) if not host_info().os.is_windows else None
-
-# buildifier: disable=no-effect
-export_file(
-    name = "ocamldep.byte",
-    src = "opam/bin/ocamldep.byte",
-) if not host_info().os.is_windows else None
-
-# buildifier: disable=no-effect
-sh_binary(
-    name = "ocamllex-exe",
-    main = "opam/bin/ocamllex.opt",
-    visibility = [
-        "PUBLIC",
-    ],
-) if not host_info().os.is_windows else None
-
-# buildifier: disable=no-effect
-sh_binary(
-    name = "utftrip-exe",
-    main = "opam/bin/utftrip",
+    name = "ocaml-exe",
+    main = "opam/bin/ocaml",
     visibility = [
         "PUBLIC",
     ],
@@ -236,17 +119,11 @@ sh_binary(
 
 # buildifier: disable=no-effect
 sh_binary(
-    name = "ocamldoc-exe",
-    main = "opam/bin/ocamldoc.opt",
+    name = "utftrip-exe",
+    main = "opam/bin/utftrip",
     visibility = [
         "PUBLIC",
     ],
-) if not host_info().os.is_windows else None
-
-# buildifier: disable=no-effect
-export_file(
-    name = "ocamlc.byte",
-    src = "opam/bin/ocamlc.byte",
 ) if not host_info().os.is_windows else None
 
 # buildifier: disable=no-effect
@@ -257,8 +134,8 @@ export_file(
 
 # buildifier: disable=no-effect
 sh_binary(
-    name = "ocamlcmt-exe",
-    main = "opam/bin/ocamlcmt",
+    name = "ocamloptp-exe",
+    main = "opam/bin/ocamloptp",
     visibility = [
         "PUBLIC",
     ],
@@ -266,8 +143,50 @@ sh_binary(
 
 # buildifier: disable=no-effect
 sh_binary(
-    name = "ocaml-syntax-shims-exe",
-    main = "opam/bin/ocaml-syntax-shims",
+    name = "ocamldoc-exe",
+    main = "opam/bin/ocamldoc.opt",
+    visibility = [
+        "PUBLIC",
+    ],
+) if not host_info().os.is_windows else None
+
+# buildifier: disable=no-effect
+sh_binary(
+    name = "ocamldep-exe",
+    main = "opam/bin/ocamldep.opt",
+    visibility = [
+        "PUBLIC",
+    ],
+) if not host_info().os.is_windows else None
+
+# buildifier: disable=no-effect
+sh_binary(
+    name = "ocamlruni-exe",
+    main = "opam/bin/ocamlruni",
+    visibility = [
+        "PUBLIC",
+    ],
+) if not host_info().os.is_windows else None
+
+# buildifier: disable=no-effect
+export_file(
+    name = "ocamlbuild.byte",
+    src = "opam/bin/ocamlbuild.byte",
+) if not host_info().os.is_windows else None
+
+# buildifier: disable=no-effect
+sh_binary(
+    name = "ocamlmklib-exe",
+    main = "opam/bin/ocamlmklib",
+    visibility = [
+        "PUBLIC",
+    ],
+) if not host_info().os.is_windows else None
+
+# buildifier: disable=no-effect
+sh_binary(
+    name = "ocamlopt-exe",
+    main = "opam/bin/ocamlopt.opt",
     visibility = [
         "PUBLIC",
     ],
@@ -284,8 +203,89 @@ sh_binary(
 
 # buildifier: disable=no-effect
 sh_binary(
-    name = "ocamloptp-exe",
-    main = "opam/bin/ocamloptp",
+    name = "ocamlobjinfo-exe",
+    main = "opam/bin/ocamlobjinfo.opt",
+    visibility = [
+        "PUBLIC",
+    ],
+) if not host_info().os.is_windows else None
+
+# buildifier: disable=no-effect
+sh_binary(
+    name = "ocamllex-exe",
+    main = "opam/bin/ocamllex.opt",
+    visibility = [
+        "PUBLIC",
+    ],
+) if not host_info().os.is_windows else None
+
+# buildifier: disable=no-effect
+sh_binary(
+    name = "ocamlprof-exe",
+    main = "opam/bin/ocamlprof",
+    visibility = [
+        "PUBLIC",
+    ],
+) if not host_info().os.is_windows else None
+
+# buildifier: disable=no-effect
+sh_binary(
+    name = "dune-exe",
+    main = "opam/bin/dune",
+    visibility = [
+        "PUBLIC",
+    ],
+) if not host_info().os.is_windows else None
+
+# buildifier: disable=no-effect
+sh_binary(
+    name = "ocaml-syntax-shims-exe",
+    main = "opam/bin/ocaml-syntax-shims",
+    visibility = [
+        "PUBLIC",
+    ],
+) if not host_info().os.is_windows else None
+
+# buildifier: disable=no-effect
+export_file(
+    name = "ocamlopt.byte",
+    src = "opam/bin/ocamlopt.byte",
+) if not host_info().os.is_windows else None
+
+# buildifier: disable=no-effect
+export_file(
+    name = "ocamlc.byte",
+    src = "opam/bin/ocamlc.byte",
+) if not host_info().os.is_windows else None
+
+# buildifier: disable=no-effect
+sh_binary(
+    name = "ocamlc-exe",
+    main = "opam/bin/ocamlc.opt",
+    visibility = [
+        "PUBLIC",
+    ],
+) if not host_info().os.is_windows else None
+
+# buildifier: disable=no-effect
+export_file(
+    name = "ocamllex.byte",
+    src = "opam/bin/ocamllex.byte",
+) if not host_info().os.is_windows else None
+
+# buildifier: disable=no-effect
+sh_binary(
+    name = "ocamlrun-exe",
+    main = "opam/bin/ocamlrun",
+    visibility = [
+        "PUBLIC",
+    ],
+) if not host_info().os.is_windows else None
+
+# buildifier: disable=no-effect
+sh_binary(
+    name = "ocamlyacc-exe",
+    main = "opam/bin/ocamlyacc",
     visibility = [
         "PUBLIC",
     ],
@@ -311,11 +311,11 @@ prebuilt_ocaml_library(
     ],
     bytecode_only = True,
     deps = [
-        ":fmt",
+        ":fmt.tty",
         ":alcotest.engine",
         ":astring",
+        ":fmt",
         ":unix",
-        ":fmt.tty",
     ],
 ) if not host_info().os.is_windows else None
 
@@ -349,13 +349,13 @@ prebuilt_ocaml_library(
     ],
     bytecode_only = True,
     deps = [
-        ":fmt",
-        ":uutf",
-        ":stdlib-shims",
-        ":cmdliner",
         ":fmt.cli",
-        ":astring",
         ":re",
+        ":stdlib-shims",
+        ":astring",
+        ":cmdliner",
+        ":uutf",
+        ":fmt",
         ":alcotest.stdlib_ext",
     ],
 ) if not host_info().os.is_windows else None
@@ -384,8 +384,8 @@ prebuilt_ocaml_library(
     ],
     bytecode_only = True,
     deps = [
-        ":astring",
         ":uutf",
+        ":astring",
         ":cmdliner",
     ],
 ) if not host_info().os.is_windows else None
@@ -577,8 +577,8 @@ prebuilt_ocaml_library(
     ],
     bytecode_only = True,
     deps = [
-        ":dynlink",
         ":compiler-libs.optcomp",
+        ":dynlink",
     ],
 ) if not host_info().os.is_windows else None
 
@@ -956,7 +956,6 @@ prebuilt_ocaml_library(
     ],
     bytecode_only = True,
     deps = [
-        ":bytes",
         ":alcotest",
         ":qcheck-core.runner",
         ":qcheck-core",
@@ -988,7 +987,6 @@ prebuilt_ocaml_library(
     ],
     bytecode_only = True,
     deps = [
-        ":bytes",
         ":unix",
     ],
 ) if not host_info().os.is_windows else None
@@ -1236,8 +1234,10 @@ prebuilt_ocaml_library(
     bytecode_lib = "opam/lib/ocaml/runtime_events/runtime_events.cma",
     c_libs = None,
     native_c_libs = [
+        "opam/lib/ocaml/libcamlruntime_eventsnat.a",
     ],
     bytecode_c_libs = [
+        "opam/lib/ocaml/libcamlruntime_eventsbyt.a",
     ],
     bytecode_only = True,
     deps = [
@@ -1328,8 +1328,10 @@ prebuilt_ocaml_library(
     bytecode_lib = "opam/lib/ocaml/str/str.cma",
     c_libs = None,
     native_c_libs = [
+        "opam/lib/ocaml/libcamlstrnat.a",
     ],
     bytecode_c_libs = [
+        "opam/lib/ocaml/libcamlstrbyt.a",
     ],
     bytecode_only = True,
     deps = [
@@ -1355,8 +1357,10 @@ prebuilt_ocaml_library(
     bytecode_lib = "opam/lib/ocaml/threads/threads.cma",
     c_libs = None,
     native_c_libs = [
+        "opam/lib/ocaml/libthreadsnat.a",
     ],
     bytecode_c_libs = [
+        "opam/lib/ocaml/libthreads.a",
     ],
     bytecode_only = True,
     deps = [
@@ -1424,8 +1428,10 @@ prebuilt_ocaml_library(
     bytecode_lib = "opam/lib/ocaml/unix/unix.cma",
     c_libs = None,
     native_c_libs = [
+        "opam/lib/ocaml/libunixnat.a",
     ],
     bytecode_c_libs = [
+        "opam/lib/ocaml/libunixbyt.a",
     ],
     bytecode_only = True,
     deps = [

@@ -27,6 +27,14 @@ Then, the Opam switch's environment must be activated:
 ```text
 opam switch ./third-party
 eval $(opam env --switch=./third-party --set-switch)
+
+<details>
+<summary> If you are an idiot like me an thought learning now is the good time to learn nushell </summary>
+```nushell
+opam env --switch=./third-party --set-switch | lines | where $it != is-empty | split column "=" name value | update value { split column ";" path | get path.0 | str trim -c "'"} | reduce -f {} {|it acc| $acc | insert $it.name $it.value} | load-env
+```
+</details>
+
 ```
 
 Now all needed packages should be installed and set up, so you can build and run the executable:
