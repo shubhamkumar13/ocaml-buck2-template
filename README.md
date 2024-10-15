@@ -4,6 +4,13 @@
 >[!NOTE]
 > apple users should check if the license works : `sudo xcodebuild -license`
 
+# Installing Buck2
+ To install buck2 you need (rustup)[https://rustup.rs/] and run the following command
+ ```bash
+rustup install nightly-2024-07-21
+cargo install --git https://github.com/facebook/buck2.git buck2
+```
+
 # Basic Example
 
 This shows how to build a simple OCaml project containing a library in [./lib/](./lib/), a binary in [./bin/](./bin/) that uses the library and tests of the library in [./test/](./test/) using Buck 2.
