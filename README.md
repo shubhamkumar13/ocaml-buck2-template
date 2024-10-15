@@ -1,6 +1,9 @@
 > [!WARNING]
 > prelude and ocaml-scripts can be out of date, please update [prelude](https://github.com/facebook/buck2-prelude.git) and [ocaml-scripts](https://github.com/facebook/ocaml-scripts.git)
 
+>[!NOTE]
+> apple users should check if the license works : `sudo xcodebuild -license`
+
 # Basic Example
 
 This shows how to build a simple OCaml project containing a library in [./lib/](./lib/), a binary in [./bin/](./bin/) that uses the library and tests of the library in [./test/](./test/) using Buck 2.
