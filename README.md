@@ -5,7 +5,7 @@
 > apple users should check if the license works : `sudo xcodebuild -license`
 
 # Installing Buck2
- To install buck2 you need (rustup)[https://rustup.rs/] and run the following command
+ To install buck2 you need [rustup](https://rustup.rs/) and run the following command
  ```bash
 rustup install nightly-2024-07-21
 cargo install --git https://github.com/facebook/buck2.git buck2
