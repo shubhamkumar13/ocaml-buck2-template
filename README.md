@@ -6,7 +6,7 @@
 
 # Installing Buck2
  To install buck2 you need [rustup](https://rustup.rs/) and run the following command.
-Here is the installation [guide](https://buck2.build/docs/about/getting_started/)
+Here is the installation [guide](https://buck2.build/docs/about/getting_started/) for buck2.
  ```bash
 rustup install nightly-2024-07-21
 cargo install --git https://github.com/facebook/buck2.git buck2
